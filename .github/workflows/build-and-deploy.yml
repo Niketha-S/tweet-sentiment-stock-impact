@@ -31,12 +31,12 @@ jobs:
         run: npm run build
 
       - name: Check Build Output
-        run: ls -R build/
+        run: ls -R dist/   # Change 'build/' to 'dist/'
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-           path: 'build/' 
+           path: 'dist/'  # Change 'build/' to 'dist/'
 
   deploy:
     needs: build_site
