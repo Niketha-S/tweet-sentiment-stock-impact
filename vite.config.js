@@ -1,8 +1,10 @@
 import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 
-// https://vite.dev/config/
 export default defineConfig({
-  base: '/tweet-sentiment-stock-impact/', // 👈 Add this line
+  base: '/tweet-sentiment-stock-impact/', // Ensure this is set for correct URL routing
   plugins: [svelte()],
+  build: {
+    outDir: 'dist', // Ensure the build output goes to the 'dist' folder
+  }
 })
